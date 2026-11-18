@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IMEDHUB | Dashboard</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ===== NAVBAR (same on every page) ===== -->
+  <nav class="navbar">
+    <a href="index.html" class="logo">
+      <div class="logo-icon">IM</div>
+      <div>IMEDHUB <span class="sub">ACADEMIC INFORMATION SYSTEM</span></div>
+    </a>
+    <ul class="nav-links locked" id="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="syllabus.html">Syllabus</a></li>
+      <li><a href="schedule.html">Timetable</a></li>
+      <li><a href="pyq.html">PYQ</a></li>
+      <li><a href="downloads.html">Downloads</a></li>
+      <li><a href="module.html?m=events">Events</a></li>
+      <li><a href="module.html?m=notes">Senior Notes</a></li>
+      <li><a href="module.html?m=assignments">Assignments</a></li>
+      <li><a href="module.html?m=attendance">Attendance</a></li>
+      <li><a href="module.html?m=library">Library</a></li>
+      <li><a href="fees.html">Fees &amp; Exam</a></li>
+      <li><a href="module.html?m=mentor">Mentor</a></li>
+      <li><a href="module.html?m=results">Results</a></li>
+    </ul>
+    <div class="nav-right">
+      <a href="index.html#about" class="plain">About Us</a>
+      <a href="contact.html" class="plain">Contact</a>
+      <a href="signup.html" class="btn-signup" id="nav-signup">Sign Up</a>
+      <a href="login.html" class="btn-login" id="nav-login">Login</a>
+      <button class="menu-btn" id="menu-btn" aria-label="Menu">&#9776;</button>
+    </div>
+  </nav>
+
+  <section class="container page-section">
+    <h2 class="section-title">Welcome, <span id="welcome-name">Student</span> 👋</h2>
+    <p class="text-muted">Your academic dashboard - access all your resources in one place.</p>
+
+    <h3>Quick Access</h3>
+    <div class="card-grid">
+      <a href="syllabus.html" class="card feature-card"><div class="icon">📘</div><h3>Syllabus</h3><p>Check your semester-wise syllabus.</p></a>
+      <a href="schedule.html" class="card feature-card"><div class="icon">📅</div><h3>Timetable</h3><p>View your class timetable.</p></a>
+      <a href="pyq.html" class="card feature-card"><div class="icon">📄</div><h3>PYQ</h3><p>Previous year question papers.</p></a>
+      <a href="downloads.html" class="card feature-card"><div class="icon">⬇️</div><h3>Downloads</h3><p>Notes, assignments and materials.</p></a>
+    </div>
+
+    <div class="card-grid" style="margin-top:20px">
+      <a href="profile.html" class="card feature-card"><div class="icon">👤</div><h3>My Profile</h3><p>View and edit your details.</p></a>
+      <a href="fees.html" class="card feature-card"><div class="icon">💳</div><h3>Fees &amp; Exam Form</h3><p>Pay fees, fill exam form, get receipts.</p></a>
+      <a href="module.html?m=attendance" class="card feature-card"><div class="icon">🗓️</div><h3>Attendance</h3><p>Subject-wise attendance.</p></a>
+      <a href="module.html?m=notes" class="card feature-card"><div class="icon">📝</div><h3>Senior Notes</h3><p>Download notes as PDF.</p></a>
+      <a href="module.html?m=library" class="card feature-card"><div class="icon">📖</div><h3>Library</h3><p>Books issued to you.</p></a>
+      <a href="module.html?m=feedback" class="card feature-card"><div class="icon">💬</div><h3>Give Feedback</h3><p>Tell us how to improve.</p></a>
+    </div>
+    <h3 style="margin-top:34px;">Recent Updates</h3>
+    <div class="card"><ul class="announcement-list" id="announcement-list"><li>Loading...</li></ul></div>
+  </section>
+
+  <!-- ===== FOOTER (same on every page) ===== -->
+  <footer class="footer">
+    <div class="footer-grid">
+      <div>
+        <h4>IMEDHUB</h4>
+        <p>Your one-stop solution for all academic information.</p>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="syllabus.html">Syllabus</a></li>
+          <li><a href="schedule.html">Timetable</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Resources</h4>
+        <ul>
+          <li><a href="pyq.html">PYQ</a></li>
+          <li><a href="downloads.html">Downloads</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Account</h4>
+        <ul>
+          <li><a href="login.html">Login</a></li>
+          <li><a href="signup.html">Sign Up</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">&copy; <span id="year">2026</span> IMEDHUB. All rights reserved.</div>
+  </footer>
+
+  <script src="js/config.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

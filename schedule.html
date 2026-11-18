@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IMEDHUB | Timetable</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ===== NAVBAR (same on every page) ===== -->
+  <nav class="navbar">
+    <a href="index.html" class="logo">
+      <div class="logo-icon">IM</div>
+      <div>IMEDHUB <span class="sub">ACADEMIC INFORMATION SYSTEM</span></div>
+    </a>
+    <ul class="nav-links locked" id="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="syllabus.html">Syllabus</a></li>
+      <li><a href="schedule.html">Timetable</a></li>
+      <li><a href="pyq.html">PYQ</a></li>
+      <li><a href="downloads.html">Downloads</a></li>
+      <li><a href="module.html?m=events">Events</a></li>
+      <li><a href="module.html?m=notes">Senior Notes</a></li>
+      <li><a href="module.html?m=assignments">Assignments</a></li>
+      <li><a href="module.html?m=attendance">Attendance</a></li>
+      <li><a href="module.html?m=library">Library</a></li>
+      <li><a href="fees.html">Fees &amp; Exam</a></li>
+      <li><a href="module.html?m=mentor">Mentor</a></li>
+      <li><a href="module.html?m=results">Results</a></li>
+    </ul>
+    <div class="nav-right">
+      <a href="index.html#about" class="plain">About Us</a>
+      <a href="contact.html" class="plain">Contact</a>
+      <a href="signup.html" class="btn-signup" id="nav-signup">Sign Up</a>
+      <a href="login.html" class="btn-login" id="nav-login">Login</a>
+      <button class="menu-btn" id="menu-btn" aria-label="Menu">&#9776;</button>
+    </div>
+  </nav>
+
+  <section class="container page-section">
+    <h2 class="section-title">Yearly Academic <span>Calendar</span></h2>
+    <p class="text-muted">Full-year view - semester dates, exams and holidays, month by month</p>
+    <div class="filter-bar"><input type="text" id="table-search" placeholder="Search (e.g. Exam, Holiday, July)..."></div>
+    <div class="table-box">
+      <table>
+        <thead><tr><th>Month</th><th>Event</th><th>Date</th><th>Type</th></tr></thead>
+        <tbody>
+          <tr><td>July</td><td>Semester 1 Begins</td><td>1 Jul 2026</td><td><span class="badge Academic">Academic</span></td></tr>
+          <tr><td>August</td><td>Independence Day Holiday</td><td>15 Aug 2026</td><td><span class="badge Holiday">Holiday</span></td></tr>
+          <tr><td>September</td><td>Mid Sem 1 Exams</td><td>10-15 Sep 2026</td><td><span class="badge Exam">Exam</span></td></tr>
+          <tr><td>October</td><td>Diwali break</td><td>18-25 Oct 2026</td><td><span class="badge Holiday">Holiday</span></td></tr>
+          <tr><td>November</td><td>Practical Exams</td><td>20 - 25 Nov 2026</td><td><span class="badge Exam">Exam</span></td></tr>
+          <tr><td>December</td><td>End Sem 1 Exams</td><td>10 - 20 Dec 2026</td><td><span class="badge Exam">Exam</span></td></tr>
+          <tr><td>January</td><td>Semester 2 Begins</td><td>5 Jan 2027</td><td><span class="badge Academic">Academic</span></td></tr>
+          <tr><td>February</td><td>Mid Sem 2 Exams</td><td>15 - 20 Feb 2027</td><td><span class="badge Exam">Exam</span></td></tr>
+          <tr><td>March</td><td>Annual Tech Fest</td><td>10 - 12 Mar 2027</td><td><span class="badge Event">Event</span></td></tr>
+          <tr><td>April</td><td>Practical Exams</td><td>15 - 20 Apr 2027</td><td><span class="badge Exam">Exam</span></td></tr>
+          <tr><td>May</td><td>End Sem 2 Exams</td><td>10 - 25 May 2027</td><td><span class="badge Exam">Exam</span></td></tr>
+          <tr><td>June</td><td>Summer Break</td><td>1 - 30 Jun 2027</td><td><span class="badge Holiday">Holiday</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER (same on every page) ===== -->
+  <footer class="footer">
+    <div class="footer-grid">
+      <div>
+        <h4>IMEDHUB</h4>
+        <p>Your one-stop solution for all academic information.</p>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="syllabus.html">Syllabus</a></li>
+          <li><a href="schedule.html">Timetable</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Resources</h4>
+        <ul>
+          <li><a href="pyq.html">PYQ</a></li>
+          <li><a href="downloads.html">Downloads</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Account</h4>
+        <ul>
+          <li><a href="login.html">Login</a></li>
+          <li><a href="signup.html">Sign Up</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">&copy; <span id="year">2026</span> IMEDHUB. All rights reserved.</div>
+  </footer>
+
+  <script src="js/config.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

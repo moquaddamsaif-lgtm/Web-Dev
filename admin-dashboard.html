@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IMEDHUB | Admin Dashboard</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+
+  <!-- ===== NAVBAR (same on every page) ===== -->
+  <nav class="navbar">
+    <a href="index.html" class="logo">
+      <div class="logo-icon">IM</div>
+      <div>IMEDHUB <span class="sub">ACADEMIC INFORMATION SYSTEM</span></div>
+    </a>
+    <ul class="nav-links locked" id="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="syllabus.html">Syllabus</a></li>
+      <li><a href="schedule.html">Timetable</a></li>
+      <li><a href="pyq.html">PYQ</a></li>
+      <li><a href="downloads.html">Downloads</a></li>
+      <li><a href="module.html?m=events">Events</a></li>
+      <li><a href="module.html?m=notes">Senior Notes</a></li>
+      <li><a href="module.html?m=assignments">Assignments</a></li>
+      <li><a href="module.html?m=attendance">Attendance</a></li>
+      <li><a href="module.html?m=library">Library</a></li>
+      <li><a href="fees.html">Fees &amp; Exam</a></li>
+      <li><a href="module.html?m=mentor">Mentor</a></li>
+      <li><a href="module.html?m=results">Results</a></li>
+    </ul>
+    <div class="nav-right">
+      <a href="index.html#about" class="plain">About Us</a>
+      <a href="contact.html" class="plain">Contact</a>
+      <a href="signup.html" class="btn-signup" id="nav-signup">Sign Up</a>
+      <a href="login.html" class="btn-login" id="nav-login">Login</a>
+      <button class="menu-btn" id="menu-btn" aria-label="Menu">&#9776;</button>
+    </div>
+  </nav>
+
+  <!-- ===== PAGE HEADER ===== -->
+  <section class="container page-section">
+    <h2 class="section-title">Admin Dashboard</h2>
+    <p class="text-muted" style="margin-bottom:24px;">
+      Only logged-in admins can see this page. Use it to add resources
+      and post announcements to the site.
+    </p>
+
+    <!-- ===== ADMIN FORMS ===== -->
+    <div class="admin-grid">
+
+      <!-- ==== Add Resource form ==== -->
+      <form id="resource-form" class="card">
+        <h3>Add a Resource</h3>
+
+        <label>Type</label>
+        <select id="res-type">
+          <option value="syllabus">Syllabus</option>
+          <option value="timetable">Timetable</option>
+          <option value="pyq">PYQ</option>
+          <option value="download">Download</option>
+        </select>
+
+        <label>Title</label>
+        <input type="text" id="res-title" placeholder="e.g. Data Structures (CS201)" required>
+
+        <label>Subtitle</label>
+        <input type="text" id="res-subtitle" placeholder="e.g. Semester 3" required>
+
+        <label>File Link (Google Drive URL)</label>
+        <input type="url" id="res-link" placeholder="https://drive.google.com/..." required>
+
+        <button type="submit" class="btn btn-primary form-btn">Add Resource</button>
+        <p id="res-msg" class="form-msg"></p>
+      </form>
+
+      <!-- ==== Add Announcement form ==== -->
+      <form id="announcement-form" class="card">
+        <h3>Add an Announcement</h3>
+
+        <label>Title</label>
+        <input type="text" id="ann-title" placeholder="e.g. Mid Sem Timetable Released" required>
+
+        <label>Date</label>
+        <input type="date" id="ann-date" required>
+
+        <button type="submit" class="btn btn-primary form-btn">Post Announcement</button>
+        <p id="ann-msg" class="form-msg"></p>
+      </form>
+
+    </div>
+
+    <div class="admin-grid" style="margin-bottom:24px">
+      <div class="card"><h3>Manage Records</h3><p class="text-muted">Add/edit attendance, results, assignments, events, library issues, mentors.</p>
+        <p><a class="mini-btn" href="module.html?m=attendance">Attendance</a><a class="mini-btn" href="module.html?m=results">Results &amp; Analytics</a><a class="mini-btn" href="module.html?m=assignments">Assignments</a><a class="mini-btn" href="module.html?m=events">Events</a><a class="mini-btn" href="module.html?m=library">Library</a><a class="mini-btn" href="module.html?m=mentor">Mentors</a><a class="mini-btn" href="module.html?m=feedback">Feedback</a><a class="mini-btn" href="module.html?m=contact">Messages</a><a class="mini-btn" href="fees.html">Payments</a></p></div>
+      <form id="set-form" class="card"><h3>Payment &amp; Fee Settings</h3>
+        <label>Payment Link (optional, e.g. https://rzp.io/l/xyz)</label><input id="s-link">
+        <label>Yearly fee - 1st year (Rs.)</label><input id="s-f1" type="number"><label>Yearly fee - 2nd year (Rs.)</label><input id="s-f2" type="number"><label>Exam fee per semester (Rs.)</label><input id="s-ex" type="number">
+        <button class="btn btn-primary form-btn">Save Settings</button></form>
+    </div>
+    <div class="card" style="margin-bottom:24px"><h3>All Users (<span id="u-count">0</span>)</h3><div class="table-box" id="user-table"></div>
+      <h3>Submitted Exam Forms</h3><div class="table-box" id="exam-table"></div></div>
+
+    <!-- ===== Saved items (with delete buttons) ===== -->
+    <div class="admin-grid admin-list">
+      <div class="card"><h3>Saved Resources</h3><ul class="announcement-list" id="resource-items"></ul></div>
+      <div class="card"><h3>Saved Announcements</h3><ul class="announcement-list" id="announcement-items"></ul></div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER (same on every page) ===== -->
+  <footer class="footer">
+    <div class="footer-grid">
+      <div>
+        <h4>IMEDHUB</h4>
+        <p>Your one-stop solution for all academic information.</p>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="syllabus.html">Syllabus</a></li>
+          <li><a href="schedule.html">Timetable</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Resources</h4>
+        <ul>
+          <li><a href="pyq.html">PYQ</a></li>
+          <li><a href="downloads.html">Downloads</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Account</h4>
+        <ul>
+          <li><a href="login.html">Login</a></li>
+          <li><a href="signup.html">Sign Up</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">&copy; <span id="year">2026</span> IMEDHUB. All rights reserved.</div>
+  </footer>
+
+  <script src="js/config.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/admin.js"></script>
+</body>
+</html>

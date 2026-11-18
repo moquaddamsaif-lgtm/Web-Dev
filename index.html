@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IMEDHUB | Home</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ===== NAVBAR (no menu on the home page) ===== -->
+  <nav class="navbar">
+    <a href="index.html" class="logo">
+      <div class="logo-icon">IM</div>
+      <div>IMEDHUB <span class="sub">ACADEMIC INFORMATION SYSTEM</span></div>
+    </a>
+    <div class="nav-right">
+      <a href="index.html#about" class="plain">About Us</a>
+      <a href="contact.html" class="plain">Contact</a>
+      <a href="signup.html" class="btn-signup" id="nav-signup">Sign Up</a>
+      <a href="login.html" class="btn-login" id="nav-login">Login</a>
+    </div>
+  </nav>
+
+  <!-- ===== TOP SECTION ===== -->
+  <header class="home-top">
+    <h1>All Academic Information <span>In One Place</span></h1>
+    <p>IMEDHUB is the academic information system for MCA students. Find your syllabus, timetable, previous year question papers and important announcements without searching everywhere.</p>
+    <div class="hero-buttons" id="hero-buttons">
+      <a href="signup.html" class="btn btn-primary">Create Free Account</a>
+      <a href="login.html" class="btn btn-light">Login</a>
+    </div>
+    <p class="notice" id="login-notice">🔒 Please register and login to open the syllabus, timetable, PYQ and downloads.</p>
+  </header>
+
+  <!-- ===== ABOUT ===== -->
+  <section class="container home-section" id="about">
+    <h2 class="section-title">About <span>Us</span></h2>
+    <p class="text-muted">IMEDHUB is the academic portal of our college: notes, attendance, assignments, fees, exam forms, library and more in one login.</p>
+    <div class="two-col">
+      <div class="card">
+        <h3>The problem</h3>
+        <p>Students often have to ask friends, check notice boards or search many different places just to find a syllabus, an exam date or an old question paper.</p>
+      </div>
+      <div class="card">
+        <h3>Our solution</h3>
+        <p>IMEDHUB keeps everything on one website. The admin uploads the information once and every registered student can see it any time.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== WHAT YOU GET ===== -->
+  <section class="container home-section">
+    <h2 class="section-title">What you get <span>after login</span></h2>
+    <p class="text-muted">These four sections open only for registered students.</p>
+    <div class="card-grid">
+      <a href="syllabus.html" class="card feature-card"><div class="icon">📘</div><h3>Syllabus</h3><p>Semester-wise course list with course type, credits and marks distribution. You can also search for a course.</p></a>
+      <a href="schedule.html" class="card feature-card"><div class="icon">📅</div><h3>Timetable</h3><p>The yearly academic calendar: semester start dates, exams, practicals, holidays and events.</p></a>
+      <a href="pyq.html" class="card feature-card"><div class="icon">📄</div><h3>PYQ</h3><p>Previous year question papers added by the admin, so you can practise before your exams.</p></a>
+      <a href="downloads.html" class="card feature-card"><div class="icon">⬇️</div><h3>Downloads</h3><p>Notes, assignments and other important documents in one place.</p></a>
+    </div>
+  </section>
+
+  <!-- ===== HOW IT WORKS ===== -->
+  <section class="container home-section">
+    <h2 class="section-title">How to <span>get started</span></h2>
+    <div class="card-grid">
+      <div class="card step-box"><h3>Register</h3><p>Click Sign Up, enter your name, email and a password of at least eight characters.</p></div>
+      <div class="card step-box"><h3>Login</h3><p>Use the same email and password. The menu and your personal dashboard will open.</p></div>
+      <div class="card step-box"><h3>Study</h3><p>Open the syllabus, check exam dates, download papers and read the latest announcements.</p></div>
+    </div>
+  </section>
+
+  <!-- ===== WHO CAN USE ===== -->
+  <section class="container home-section">
+    <h2 class="section-title">Who can <span>use it?</span></h2>
+    <div class="two-col">
+      <div class="card">
+        <h3>👩‍🎓 Students</h3>
+        <ul class="check-list">
+          <li>Register and login with email</li>
+          <li>View syllabus and academic calendar</li>
+          <li>Open PYQ, senior notes and assignments</li>
+          <li>Track attendance, results, library books and fees</li>
+          <li>Fill the exam form online and download receipts</li>
+          <li>Read the latest announcements</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>🛠️ Admin</h3>
+        <ul class="check-list">
+          <li>Add syllabus, timetable, PYQ and download links</li>
+          <li>Post announcements for students</li>
+          <li>Delete old or wrong entries</li>
+          <li>Keep all information up to date</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ANNOUNCEMENTS ===== -->
+  <section class="container home-section">
+    <h2 class="section-title">Latest <span>Announcements</span></h2>
+    <div class="card">
+      <ul class="announcement-list" id="announcement-list">
+        <li>Loading announcements...</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ===== FAQ ===== -->
+  <section class="container home-section">
+    <h2 class="section-title">Common <span>Questions</span></h2>
+    <div class="card">
+      <details>
+        <summary>Is IMEDHUB free to use?</summary>
+        <p>Yes. You only need to create an account with your email.</p>
+      </details>
+      <details>
+        <summary>Why can't I open the Syllabus page?</summary>
+        <p>The pages are available only after you register and login. If you are not logged in you will be sent to the login page.</p>
+      </details>
+      <details>
+        <summary>I forgot to logout. Is that a problem?</summary>
+        <p>Click the Logout button in the top right corner when you finish, especially on a shared computer.</p>
+      </details>
+      <details>
+        <summary>Who adds the PYQ and downloads?</summary>
+        <p>Only the admin can add them. If something is missing, please ask your admin to upload it.</p>
+      </details>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER (same on every page) ===== -->
+  <footer class="footer">
+    <div class="footer-grid">
+      <div>
+        <h4>IMEDHUB</h4>
+        <p>Your one-stop solution for all academic information.</p>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="syllabus.html">Syllabus</a></li>
+          <li><a href="schedule.html">Timetable</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Resources</h4>
+        <ul>
+          <li><a href="pyq.html">PYQ</a></li>
+          <li><a href="downloads.html">Downloads</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Account</h4>
+        <ul>
+          <li><a href="login.html">Login</a></li>
+          <li><a href="signup.html">Sign Up</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">&copy; <span id="year">2026</span> IMEDHUB. All rights reserved.</div>
+  </footer>
+
+  <script src="js/config.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IMEDHUB | Contact Us</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+  <!-- ===== NAVBAR (same on every page) ===== -->
+  <nav class="navbar">
+    <a href="index.html" class="logo">
+      <div class="logo-icon">IM</div>
+      <div>IMEDHUB <span class="sub">ACADEMIC INFORMATION SYSTEM</span></div>
+    </a>
+    <ul class="nav-links locked" id="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="syllabus.html">Syllabus</a></li>
+      <li><a href="schedule.html">Timetable</a></li>
+      <li><a href="pyq.html">PYQ</a></li>
+      <li><a href="downloads.html">Downloads</a></li>
+      <li><a href="module.html?m=events">Events</a></li>
+      <li><a href="module.html?m=notes">Senior Notes</a></li>
+      <li><a href="module.html?m=assignments">Assignments</a></li>
+      <li><a href="module.html?m=attendance">Attendance</a></li>
+      <li><a href="module.html?m=library">Library</a></li>
+      <li><a href="fees.html">Fees &amp; Exam</a></li>
+      <li><a href="module.html?m=mentor">Mentor</a></li>
+      <li><a href="module.html?m=results">Results</a></li>
+    </ul>
+    <div class="nav-right">
+      <a href="index.html#about" class="plain">About Us</a>
+      <a href="contact.html" class="plain">Contact</a>
+      <a href="signup.html" class="btn-signup" id="nav-signup">Sign Up</a>
+      <a href="login.html" class="btn-login" id="nav-login">Login</a>
+      <button class="menu-btn" id="menu-btn" aria-label="Menu">&#9776;</button>
+    </div>
+  </nav>
+  <main class="form-wrap"><section class="wel"><h2>Contact <span>Us</span></h2><p id="c-info"></p></section>
+    <form id="contact-form" class="card form-card">
+      <label for="name">Your Name</label><input id="name" required>
+      <label for="email">Email</label><input id="email" type="email" required>
+      <label for="message">Message</label><textarea id="message" required></textarea>
+      <button class="btn btn-primary form-btn">Send Message</button></form>
+    <script>window.addEventListener("load",function(){document.getElementById("c-info").textContent=COLLEGE.address+" | "+COLLEGE.phone+" | "+COLLEGE.email;});</script></main>
+  <!-- ===== FOOTER (same on every page) ===== -->
+  <footer class="footer">
+    <div class="footer-grid">
+      <div>
+        <h4>IMEDHUB</h4>
+        <p>Your one-stop solution for all academic information.</p>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="syllabus.html">Syllabus</a></li>
+          <li><a href="schedule.html">Timetable</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Resources</h4>
+        <ul>
+          <li><a href="pyq.html">PYQ</a></li>
+          <li><a href="downloads.html">Downloads</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Account</h4>
+        <ul>
+          <li><a href="login.html">Login</a></li>
+          <li><a href="signup.html">Sign Up</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">&copy; <span id="year">2026</span> IMEDHUB. All rights reserved.</div>
+  </footer>
+
+  <script src="js/config.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

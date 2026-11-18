@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IMEDHUB | My Profile</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+  <!-- ===== NAVBAR (same on every page) ===== -->
+  <nav class="navbar">
+    <a href="index.html" class="logo">
+      <div class="logo-icon">IM</div>
+      <div>IMEDHUB <span class="sub">ACADEMIC INFORMATION SYSTEM</span></div>
+    </a>
+    <ul class="nav-links locked" id="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="syllabus.html">Syllabus</a></li>
+      <li><a href="schedule.html">Timetable</a></li>
+      <li><a href="pyq.html">PYQ</a></li>
+      <li><a href="downloads.html">Downloads</a></li>
+      <li><a href="module.html?m=events">Events</a></li>
+      <li><a href="module.html?m=notes">Senior Notes</a></li>
+      <li><a href="module.html?m=assignments">Assignments</a></li>
+      <li><a href="module.html?m=attendance">Attendance</a></li>
+      <li><a href="module.html?m=library">Library</a></li>
+      <li><a href="fees.html">Fees &amp; Exam</a></li>
+      <li><a href="module.html?m=mentor">Mentor</a></li>
+      <li><a href="module.html?m=results">Results</a></li>
+    </ul>
+    <div class="nav-right">
+      <a href="index.html#about" class="plain">About Us</a>
+      <a href="contact.html" class="plain">Contact</a>
+      <a href="signup.html" class="btn-signup" id="nav-signup">Sign Up</a>
+      <a href="login.html" class="btn-login" id="nav-login">Login</a>
+      <button class="menu-btn" id="menu-btn" aria-label="Menu">&#9776;</button>
+    </div>
+  </nav>
+  <section class="container page-section"><h2 class="section-title">My <span>Profile</span></h2>
+    <form id="pf" class="card wide-card"><div class="form-grid" id="pf-f"></div><button class="btn btn-primary form-btn">Save Changes</button></form></section>
+    <script>window.addEventListener("load",function(){
+    (function(){const u=curUser();if(!u||u.role==="admin")return;const F=[["id","Enrolment No.",1],["email","Email",1],["name","Full Name"],["mobile","Mobile"],["course","Course"],["year","Year of Study"],["address","Address"],["password","New password (leave blank to keep)"]];
+    document.getElementById("pf-f").innerHTML=F.map(f=>"<div><label>"+f[1]+"</label><input id='p_"+f[0]+"' "+(f[2]?"readonly ":"")+(f[0]=="password"?"type='password' ":"")+"value='"+(f[0]=="password"?"":esc(u[f[0]]))+"'></div>").join("");
+    document.getElementById("pf").onsubmit=e=>{e.preventDefault();const l=loadList(KEY_USERS),x=l.find(y=>y.email===u.email);["name","mobile","course","year","address"].forEach(k=>x[k]=document.getElementById("p_"+k).value.trim());
+    if(!/^[6-9]\d{9}$/.test(x.mobile))return popup("Enter a valid 10-digit mobile number.");const pw=document.getElementById("p_password").value;if(pw){if(pw.length<8)return popup("Password must be at least 8 characters.");x.password=pw}
+    saveList(KEY_USERS,l);localStorage.setItem(KEY_CURRENT,JSON.stringify({name:x.name,email:x.email,role:"student"}));popup("Profile updated.","success")}})();
+    });</script>
+  <!-- ===== FOOTER (same on every page) ===== -->
+  <footer class="footer">
+    <div class="footer-grid">
+      <div>
+        <h4>IMEDHUB</h4>
+        <p>Your one-stop solution for all academic information.</p>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="syllabus.html">Syllabus</a></li>
+          <li><a href="schedule.html">Timetable</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Resources</h4>
+        <ul>
+          <li><a href="pyq.html">PYQ</a></li>
+          <li><a href="downloads.html">Downloads</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Account</h4>
+        <ul>
+          <li><a href="login.html">Login</a></li>
+          <li><a href="signup.html">Sign Up</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">&copy; <span id="year">2026</span> IMEDHUB. All rights reserved.</div>
+  </footer>
+
+  <script src="js/config.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+/* Extra styles only for the admin dashboard page */
+.admin-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+  align-items: start;
+}
+.admin-list { margin-top: 30px; }
+.admin-list li { align-items: center; }
+.delete-btn {
+  border: 0; background: #fee2e2; color: #b91c1c;
+  padding: 5px 12px; border-radius: 8px; cursor: pointer; font-weight: 600;
+}
+.delete-btn:hover { background: #fecaca; }
