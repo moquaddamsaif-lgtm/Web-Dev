@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Events Demo</title>
+
+    <script>
+        function clickEvent()
+        {
+            alert("Button Clicked");
+        }
+
+        function dblClickEvent()
+        {
+            alert("Button Double Clicked");
+        }
+
+        function overEvent()
+        {
+            document.getElementById("msg").innerHTML =
+            "Mouse is over the paragraph";
+        }
+
+        function outEvent()
+        {
+            document.getElementById("msg").innerHTML =
+            "Mouse Left the Paragraph";
+        }
+
+        function keyDownEvent()
+        {
+            document.getElementById("msg").innerHTML =
+            "Key Pressed";
+        }
+
+        function keyUpEvent()
+        {
+            document.getElementById("msg").innerHTML =
+            "Key Released";
+        }
+
+        function changeEvent()
+        {
+            let c = document.getElementById("course").value;
+
+            document.getElementById("msg").innerHTML =
+            "Selected Course : " + c;
+        }
+
+        function focusEvent()
+        {
+            document.getElementById("msg").innerHTML =
+            "Textbox Focused";
+        }
+
+        function blurEvent()
+        {
+            document.getElementById("msg").innerHTML =
+            "Textbox Left";
+        }
+
+        function validate()
+        {
+            let name =
+            document.getElementById("name").value;
+
+            if(name == "")
+            {
+                alert("Name Required");
+                return false;
+            }
+
+            alert("Form Submitted");
+            return true;
+        }
+
+        function pageLoad()
+        {
+            alert("Page Loaded Successfully");
+        }
+    </script>
+</head>
+
+<body onload="pageLoad()">
+
+    <h2>JavaScript Events Example</h2>
+
+    <p id="msg">Event Output Here</p>
+
+    <button onclick="clickEvent()">
+        Click Me
+    </button>
+
+    <br><br>
+
+    <button ondblclick="dblClickEvent()">
+        Double Click Me
+    </button>
+
+    <br><br>
+
+    <p onmouseover="overEvent()"
+       onmouseout="outEvent()"
+       style="border:1px solid black; width:250px;">
+        Move Mouse Here
+    </p>
+
+    <br>
+
+    <input type="text"
+           id="name"
+           placeholder="Enter Name"
+           onfocus="focusEvent()"
+           onblur="blurEvent()"
+           onkeydown="keyDownEvent()"
+           onkeyup="keyUpEvent()">
+
+    <br><br>
+
+    <select id="course" onchange="changeEvent()">
+        <option value="">Select Course</option>
+        <option value="MCA">MCA</option>
+        <option value="BCA">BCA</option>
+        <option value="B.TECH">B.TECH</option>
+    </select>
+
+    <br><br>
+
+    <form onsubmit="return validate()">
+        <input type="submit" value="Submit Form">
+    </form>
+
+</body>
+</html>

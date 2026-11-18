@@ -1,0 +1,14 @@
+h3{
+    color:aqua;
+    font-family: 'Times New Roman', Times, serif;
+    text-shadow: 2px;
+}
+h1{
+    color: aquamarine;
+    background: blue;
+    text-align: center;
+}
+h2{
+    color:rgb(34, 109, 185);
+    font-family: 'Courier New', Courier, monospace;
+}

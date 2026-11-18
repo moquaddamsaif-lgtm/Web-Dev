@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding:0;
+        }
+        h2{
+            color: palevioletred;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            text-align: center;
+            background-color: aqua;
+            height: fit-content;
+
+
+        }
+        .label{
+            color:black;
+            font-size: large;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            background-color: brown ;
+            width: 170px;
+            height: 20px;
+        
+
+        
+        }
+        #ln{
+            color: black;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: large;
+            background-color: brown;
+            width: 170px;
+        }
+ .field-box {
+    border: 2px solid blue;  
+    border-radius: 6px;
+    width: 170px;
+ }          
+
+.field-box input {
+    border: none;            
+    outline: none;          
+    width: 170px;                   
+    box-sizing: border-box;
+}
+
+    </style>
+</head>
+<body>
+    <h2>User Registration Form</h2>
+    <form action="register" method="post">
+        <div class="label">
+        <label for="">First Name:</label>
+        </div>
+        <input type="text" id="name1" value="name" placeholder="first Name" required><br><br>
+        <div id="ln">
+        <label for="">Last Name: </label>
+        </div>
+        <div class="field-box">
+        <input type="text" id="lst" value="name" placeholder="Last Name" required>
+        </div>
+        <br><br>
+        <label for="">Password:</label>
+        <input type="password" id="pass" value="pass" name="password" required>
+        <br><br>
+        <label for="">Gender:</label>
+        <input type="radio" name="gender" value="male">Male
+        <input type="radio" name="gender" value="Female">Female
+        <br><br>
+        <label for="" style="color: blue;">Hobbies</label>
+        <input type="checkbox" name="hobby" value="reading">Reading
+        <input type="checkbox" name="hobby" value="sports">Sports
+        <br><br>
+        <label for="">Course:</label>
+        <select name="course" id="course1">
+            <option value="html">HTml</option>
+            <option value="Css">CSS</option>
+            <option value="JavaScript">JAVASCRIPT</option>
+        </select>
+        <br><br>
+        <label for="">Address</label>
+        <textarea name="address" id="add" rows="7" cols="25"></textarea>
+        <br><br>
+        <input type="submit" name="submit" id="sub">
+        <input type="reset" name="reset" id="reset">
+    
+    </form>
+</body>
+</html>

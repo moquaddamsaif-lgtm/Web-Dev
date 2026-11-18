@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function clickEvent()
+        {
+            alert("Button Clicked");
+        }
+        function dbclickEvent()
+        {
+            alert("Button Double clicked");
+        }
+        function overEvent()
+        {
+            document.getElementById("msg").innerHTML=
+            "Mouse over paragraph";
+        }
+        function ChangeEvent()
+        {
+            let c = document.getElementById("course").value
+            document.getElementById("msg").innerHTML="Selected Course: "+c;
+        }
+        function Validate()
+        {
+            let name = document.getElementById("name").value
+
+
+            if(name==""){
+                alert("Name Required ")
+                return false;
+            }
+            else{
+                alert("Form submitted")
+                return true;
+            }
+        }
+        function pageLoad()
+        {
+            alert("Page Loaded Successfully")
+        }
+    </script>
+</head>
+
+<body onload="pageLoad()">
+    <h1>JavaScript</h1>
+    <p id="msg">Event test of javascript</p>
+
+    <button onclick="clickEvent()">ClickMe</button><br><br>
+    <button ondblclick="dbclickEvent()">Double ClickEvent</button>
+    <br><br>
+
+    <p onmouseover="overEvent()" style="border: 1px solid black; width: 250;">Move Mouse here </p>
+    <br><br>
+
+    <input type="text" id="name" placeholder="Enter your Name" onfocus="focusEvent()" onblur="blurEvent()">
+
+    <br><br>
+
+    <select name="course" id="course" onchange="ChangeEvent()">
+        <option value="">Select Course</option>
+        <option value="MCA">MCA</option>
+        <option value="BCA">BCA</option>
+        <option value="BBA">BBA</option>
+        <option value="MBA">MBA</option>
+    </select>
+    <br><br>
+
+    <form onsubmit="return Validate()">
+        <input type="submit" value="submit Form">
+    </form>
+
+
+    
+</body>
+</html>
